@@ -4,17 +4,18 @@ import sqlite3
 from datetime import datetime
 from urllib.parse import urlparse
 
-from flask import Flask, request, redirect, url_for, flash, sendfile, rendertemplatestring
+from flask import Flask, request, redirect, url_for, flash, send_file
+rendertemplatestring
 import yt_dlp
 import validators
 
 
 app = Flask(_name_)
-app.secretkey = os.environ.get("SECRETKEY", "change-this-secret")
+app.secret_key = os.environ.get("SECRETKEY", "change-this-secret")
 
 DB = "media_history.db"
 DOWNLOAD_DIR = "downloads"
-os.makedirs(DOWNLOADDIR, existok=True)
+os.makedirs(DOWNLOADDIR, exist_ok=True)
 
 
 HTML = """
