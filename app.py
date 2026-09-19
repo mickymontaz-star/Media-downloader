@@ -5,7 +5,7 @@ from datetime import datetime
 from urllib.parse import urlparse
 
 from flask import Flask, request, redirect, url_for, flash, send_file
-rendertemplatestring
+render_template_string
 import yt_dlp
 import validators
 
