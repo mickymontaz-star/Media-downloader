@@ -4,7 +4,7 @@ import sqlite3
 from datetime import datetime
 from urllib.parse import urlparse
 
-from flask import Flask, request, redirect, urlfor, flash, sendfile, rendertemplatestring
+from flask import Flask, request, redirect, url_for, flash, sendfile, rendertemplatestring
 import yt_dlp
 import validators
 
